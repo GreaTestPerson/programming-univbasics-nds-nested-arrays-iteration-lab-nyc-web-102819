@@ -44,4 +44,16 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  
+   row = 0
+  totalPairs = 0
+  while row < src.count do
+      if src[row][0] % 2 == 0 && src[row][1] % 2 == 0
+        totalPairs += src[row][0] + src[row][1]
+        row += 1
+      else
+        row += 1
+      end
+    end
+    p totalPairs
 end
